@@ -23,6 +23,7 @@ class ApiController
     with ApiRepositoryControllerBase
     with ApiRepositoryStatusControllerBase
     with ApiUserControllerBase
+    with ApiWebHookService
     with RepositoryService
     with AccountService
     with ProtectedBranchService
