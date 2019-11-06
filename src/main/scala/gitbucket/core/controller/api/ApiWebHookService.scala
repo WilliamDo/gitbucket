@@ -32,7 +32,7 @@ trait ApiWebHookService extends ControllerBase {
     val repo = params("repo")
     val hookDetails = extractFromJsonBody[CreateAWebHook].get
     println(hookDetails)
-    addWebHook(owner, repo, hookDetails.url, Seq(WebHook.PullRequest).toSet, WebHookContentType.FORM, Option.empty)
+    addWebHook(owner, repo, hookDetails.url, Seq(WebHook.PullRequest).toSet, WebHookContentType.JSON, Option.empty)
   }
 
 }
